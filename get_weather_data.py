@@ -28,7 +28,7 @@ covid_data = pandas.read_csv('./covid-confirmed-usafacts.csv')
 
 counties = [f'{covid_data.values[0][1]}, {covid_data.values[0][2]}']
 
-for county in range(16, 3195):
+for county in range(108, 3195):
   print(f'Getting data for {covid_data.values[county][1]}, {covid_data.values[county][2]} ({county})')
   # Get search bar
   location = driver.find_element_by_xpath('//*[@id="historySearch"]')
