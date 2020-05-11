@@ -115,9 +115,7 @@ for county in range(108, 3195):
     data_point[f'_4_{date.text}_20'] = temp.text
 
   covid_temperature = pandas.read_csv('covid-temperature.csv')
-
   covid_temperature = covid_temperature.append(data_point, ignore_index=True)
-
   covid_temperature.to_csv('covid-temperature.csv', index=False)
 
   print(f'{data_point["weather_station"]} for {data_point["county_name"]}, {data_point["state"]} saved ({county})')
